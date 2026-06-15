@@ -28,11 +28,11 @@ export function ProfileCard() {
       </div>
 
       <div className="px-5 pt-6 pb-8 md:px-7 md:pt-7 md:pb-10">
-        <h1 className="mb-4 text-[30px] font-semibold leading-[110%] text-gradient md:text-[22px] md:leading-[120%]">
+        <h1 className="mb-4 text-[22px] font-semibold leading-[110%] text-gradient md:text-[22px] md:leading-[120%]">
           Привет, я — Аня Егорова!
         </h1>
 
-        <p className="mb-5 text-[24px] font-medium leading-[120%] text-foreground md:mb-4 md:text-[18px]">
+        <p className="mb-5 text-[18px] font-medium leading-[120%] text-foreground md:mb-4 md:text-[18px]">
           Product &amp; Communication Designer +2 года опыта.
           <br />
           Исследую, проектирую и запускаю цифровые продукты
@@ -40,7 +40,7 @@ export function ProfileCard() {
           для B2C и B2B.
         </p>
 
-        <p className="mb-6 text-[20px] leading-[125%] text-muted md:text-[16px] md:leading-[120%]">
+        <p className="mb-6 text-[16px] leading-[125%] text-muted md:text-[16px] md:leading-[120%]">
           Бэкграунд в крупных брендинговых и коммуникационных проектах Ex-TWIGA
           CG / OGGI Event, проекты для Авито, Альфа-Банк, HeadHunter, VK,
           РЖД-Медицина.
