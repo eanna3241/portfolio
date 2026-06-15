@@ -5,15 +5,21 @@ import { PortfolioCard } from "./PortfolioCard";
 export function PortfolioGrid() {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      <Link href="/mobile" className="transition duration-300 hover:-translate-y-1">
+      <Link
+        href="/mobile"
+        className="transition duration-300 hover:-translate-y-1"
+      >
         <PortfolioCard
           title="MOBILE"
           image="/images/mobile.png"
-          imageClassName="!h-[230px] translate-y-24 md:!h-[230px]"
+          imageClassName="!h-[230px] translate-y-24"
         />
       </Link>
 
-      <Link href="/web" className="transition duration-300 hover:-translate-y-1">
+      <Link
+        href="/web"
+        className="transition duration-300 hover:-translate-y-1"
+      >
         <PortfolioCard
           title="WEB"
           image="/images/web.png"
@@ -21,7 +27,10 @@ export function PortfolioGrid() {
         />
       </Link>
 
-      <Link href="/presentation" className="transition duration-300 hover:-translate-y-1">
+      <Link
+        href="/presentation"
+        className="transition duration-300 hover:-translate-y-1"
+      >
         <PortfolioCard
           title="PRESENTATION"
           image="/images/presentation-new.png"
@@ -29,11 +38,14 @@ export function PortfolioGrid() {
         />
       </Link>
 
-      <Link href="/graphic" className="transition duration-300 hover:-translate-y-1">
+      <Link
+        href="/graphic"
+        className="transition duration-300 hover:-translate-y-1"
+      >
         <PortfolioCard
           title="GRAPHIC EVENT"
           image="/images/graphic-new.png"
-          titleClassName="!whitespace-nowrap"
+          titleClassName="!text-[42px] !whitespace-nowrap md:!text-[48px]"
           imageClassName="!h-[300px] translate-y-16 md:!h-[420px] md:translate-y-20"
         />
       </Link>
