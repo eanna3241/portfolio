@@ -9,7 +9,6 @@ const screens = [
   "/images/capsule-add step 2.png",
   "/images/capsule-add step 3.png",
   "/images/capsule-add step 4.png",
-  "/images/capsule-add step 5.png",
   "/images/capsule-add step 6.png",
   "/images/capsule-add step 7.png",
   "/images/capsule-done.png",
