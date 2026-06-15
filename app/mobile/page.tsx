@@ -60,7 +60,7 @@ const mobileCases: MobileCase[] = [
 export default function MobilePage() {
   return (
     <main className="min-h-screen bg-background">
-      <div className="px-7 py-10 md:px-10 md:py-8">
+      <div className="overflow-hidden px-7 py-10 md:px-10 md:py-8">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-6 md:gap-5">
           <header className="flex items-center justify-between">
             <Link
@@ -123,7 +123,8 @@ export default function MobilePage() {
             <SocialLinks />
           </header>
 
-          <nav className="flex gap-3 overflow-x-auto pb-1 md:hidden">
+          {/* Mobile tabs */}
+          <nav className="-mx-7 flex gap-3 overflow-x-auto px-7 pb-1 md:hidden [&::-webkit-scrollbar]:hidden">
             <Link
               href="/mobile"
               className="flex h-12 shrink-0 items-center justify-center rounded-full px-7 text-[18px] font-medium text-white [background:var(--accent-gradient)]"
@@ -144,6 +145,20 @@ export default function MobilePage() {
             >
               Presentation
             </Link>
+
+            <Link
+              href="/graphic"
+              className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px] font-medium text-foreground"
+            >
+              Graphic
+            </Link>
+
+            <Link
+              href="/concept"
+              className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px] font-medium text-foreground"
+            >
+              Concept
+            </Link>
           </nav>
 
           <section className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
@@ -151,7 +166,21 @@ export default function MobilePage() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group relative h-[720px] overflow-hidden rounded-[50px] bg-card p-8 transition-all duration-300 hover:-translate-y-1 md:h-[580px] md:rounded-[var(--radius-card)] md:p-10"
+                className="
+                  group
+                  relative
+                  h-[620px]
+                  overflow-hidden
+                  rounded-[50px]
+                  bg-card
+                  p-8
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  md:h-[580px]
+                  md:rounded-[var(--radius-card)]
+                  md:p-10
+                "
               >
                 <div className="flex flex-col items-start gap-5 md:flex-row md:items-center md:gap-6">
                   <Image
@@ -178,7 +207,7 @@ export default function MobilePage() {
                   ))}
                 </div>
 
-                <div className="absolute left-8 top-[300px] flex h-12 items-center rounded-full bg-foreground px-8 text-[18px] font-medium text-card transition-all duration-300 hover:text-white hover:[background:var(--accent-gradient)] md:bottom-10 md:left-10 md:top-auto">
+                <div className="mt-6 flex h-12 w-fit items-center rounded-full bg-foreground px-8 text-[18px] font-medium text-card transition-all duration-300 hover:text-white hover:[background:var(--accent-gradient)] md:absolute md:bottom-10 md:left-10 md:mt-0">
                   Подробнее
                 </div>
 
@@ -187,7 +216,23 @@ export default function MobilePage() {
                   alt=""
                   width={460}
                   height={900}
-                  className="absolute bottom-[-120px] left-1/2 h-[470px] w-auto -translate-x-1/2 object-contain transition-transform duration-500 group-hover:-translate-y-3 md:bottom-[-130px] md:left-auto md:right-10 md:h-[520px] md:translate-x-0"
+                  className="
+                    absolute
+                    bottom-[-125px]
+                    left-1/2
+                    h-[420px]
+                    w-auto
+                    -translate-x-1/2
+                    object-contain
+                    transition-transform
+                    duration-500
+                    group-hover:-translate-y-3
+                    md:bottom-[-130px]
+                    md:left-auto
+                    md:right-10
+                    md:h-[520px]
+                    md:translate-x-0
+                  "
                 />
               </Link>
             ))}
