@@ -60,7 +60,7 @@ const mobileCases: MobileCase[] = [
 export default function MobilePage() {
   return (
     <main className="min-h-screen bg-background">
-      <div className="bg-background px-7 py-10 md:min-w-[1200px] md:px-10 md:py-8">
+      <div className="px-7 py-10 md:min-w-[1200px] md:px-10 md:py-8">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-6 md:gap-5">
           <header className="flex items-center justify-between">
             <Link
@@ -73,11 +73,12 @@ export default function MobilePage() {
                   alt="Аня Егорова"
                   fill
                   className="object-contain"
+                  sizes="80px"
                   priority
                 />
               </div>
 
-              <p className="hidden text-[18px] text-foreground md:block">
+              <p className="hidden text-[18px] leading-[100%] tracking-tight text-foreground md:block">
                 Аня Егорова
               </p>
             </Link>
@@ -92,28 +93,28 @@ export default function MobilePage() {
 
               <Link
                 href="/web"
-                className="flex h-12 items-center justify-center rounded-full bg-card px-8 text-[18px]"
+                className="flex h-12 items-center justify-center rounded-full bg-card px-8 text-[18px] font-medium text-foreground transition hover:opacity-70"
               >
                 Web
               </Link>
 
               <Link
                 href="/presentation"
-                className="flex h-12 items-center justify-center rounded-full bg-card px-8 text-[18px]"
+                className="flex h-12 items-center justify-center rounded-full bg-card px-8 text-[18px] font-medium text-foreground transition hover:opacity-70"
               >
                 Presentation
               </Link>
 
               <Link
                 href="/graphic"
-                className="flex h-12 items-center justify-center rounded-full bg-card px-8 text-[18px]"
+                className="flex h-12 items-center justify-center rounded-full bg-card px-8 text-[18px] font-medium text-foreground transition hover:opacity-70"
               >
                 Graphic
               </Link>
 
               <Link
                 href="/concept"
-                className="flex h-12 items-center justify-center rounded-full bg-card px-8 text-[18px]"
+                className="flex h-12 items-center justify-center rounded-full bg-card px-8 text-[18px] font-medium text-foreground transition hover:opacity-70"
               >
                 Concept
               </Link>
@@ -122,9 +123,8 @@ export default function MobilePage() {
             <SocialLinks />
           </header>
 
-          {/* MOBILE TABS */}
           <div className="-mx-7 overflow-x-auto px-7 md:hidden [&::-webkit-scrollbar]:hidden">
-            <div className="flex w-max gap-3 pb-1">
+            <nav className="flex w-max gap-3 pb-1">
               <Link
                 href="/mobile"
                 className="flex h-12 shrink-0 items-center justify-center rounded-full px-7 text-[18px] font-medium text-white [background:var(--accent-gradient)]"
@@ -134,67 +134,56 @@ export default function MobilePage() {
 
               <Link
                 href="/web"
-                className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px]"
+                className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px] font-medium text-foreground"
               >
                 Web
               </Link>
 
               <Link
                 href="/presentation"
-                className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px]"
+                className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px] font-medium text-foreground"
               >
                 Presentation
               </Link>
 
               <Link
                 href="/graphic"
-                className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px]"
+                className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px] font-medium text-foreground"
               >
                 Graphic
               </Link>
 
               <Link
                 href="/concept"
-                className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px]"
+                className="flex h-12 shrink-0 items-center justify-center rounded-full bg-card px-7 text-[18px] font-medium text-foreground"
               >
                 Concept
               </Link>
-            </div>
+            </nav>
           </div>
 
-          <section className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
+          <section className="grid grid-cols-1 gap-8 md:mt-5 md:grid-cols-2 md:gap-6">
             {mobileCases.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="
-                  group
-                  relative
-                  h-[880px]
-                  overflow-hidden
-                  rounded-[50px]
-                  bg-card
-                  p-8
-                  md:h-[580px]
-                  md:rounded-[60px]
-                  md:p-10
-                "
+                className="group relative h-[820px] overflow-hidden rounded-[50px] bg-card p-8 transition-all duration-300 hover:-translate-y-1 md:h-[580px] md:rounded-[var(--radius-card)] md:p-10"
               >
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col items-start gap-5 md:flex-row md:items-center md:gap-6">
                   <Image
                     src={item.logo}
                     alt=""
-                    width={64}
-                    height={64}
-                    className="rounded-full"
+                    width={74}
+                    height={74}
+                    className="h-[64px] w-[64px] shrink-0 rounded-full md:h-[74px] md:w-[74px]"
                   />
 
-                  <h2 className="max-w-[520px] text-[28px] font-medium leading-[110%] tracking-[-0.03em] md:text-[22px]">
+                  <h2 className="max-w-[580px] text-[28px] font-medium leading-[1.12] tracking-[-0.03em] text-foreground md:text-[22px] md:leading-[1.15]">
                     {item.title}
                   </h2>
                 </div>
 
-                <div className="mt-10 flex max-w-[360px] flex-wrap gap-2 md:mt-12">
+                <div className="mt-9 flex max-w-[360px] flex-wrap gap-2 md:mt-12 md:max-w-[340px]">
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
@@ -205,30 +194,16 @@ export default function MobilePage() {
                   ))}
                 </div>
 
-                <div className="mt-8 flex h-12 w-fit items-center rounded-full bg-black px-8 text-[18px] font-medium text-white md:absolute md:bottom-10 md:left-10 md:mt-0">
+                <div className="mt-7 flex h-12 w-fit items-center rounded-full bg-foreground px-8 text-[18px] font-medium text-card transition-all duration-300 hover:text-white hover:[background:var(--accent-gradient)] md:absolute md:bottom-10 md:left-10 md:mt-0">
                   Подробнее
                 </div>
 
                 <Image
                   src={item.image}
                   alt=""
-                  width={500}
-                  height={1000}
-                  className="
-                    absolute
-                    bottom-[-220px]
-                    left-1/2
-                    h-[520px]
-                    w-auto
-                    -translate-x-1/2
-                    object-contain
-
-                    md:bottom-[-130px]
-                    md:left-auto
-                    md:right-10
-                    md:h-[520px]
-                    md:translate-x-0
-                  "
+                  width={460}
+                  height={900}
+                  className="absolute bottom-[-190px] left-1/2 h-[500px] w-auto -translate-x-1/2 object-contain transition-transform duration-500 group-hover:-translate-y-3 md:bottom-[-130px] md:left-auto md:right-10 md:h-[520px] md:translate-x-0"
                 />
               </Link>
             ))}
