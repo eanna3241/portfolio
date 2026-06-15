@@ -18,25 +18,19 @@ export function PortfolioCard({
   imageClassName = "",
   titleClassName = "",
 }: PortfolioCardProps) {
-  const isWideCard = wide;
-
   return (
     <Card
       className={`
-        relative overflow-hidden rounded-[60px] bg-white
-        ${wide ? "col-span-2 h-[220px]" : "h-[180px]"}
+        relative overflow-hidden rounded-[50px] bg-white md:rounded-[60px]
+        ${wide ? "h-[180px] md:col-span-2 md:h-[220px]" : "h-[180px]"}
       `}
     >
       <h3
         className={`
-          absolute z-0 text-[48px] font-semibold uppercase leading-none
-          tracking-[-0.06em] text-[#E8E6E4]
-          pointer-events-none select-none
-          ${
-            isWideCard
-              ? "left-10 top-1/2 -translate-y-1/2"
-              : "left-1/2 top-0 -translate-x-1/2"
-          }
+          absolute left-1/2 top-0 z-0 -translate-x-1/2
+          text-[48px] font-semibold uppercase leading-none tracking-[-0.06em]
+          text-[#E8E6E4] pointer-events-none select-none
+          md:text-[48px]
           ${titleClassName}
         `}
       >
@@ -44,11 +38,9 @@ export function PortfolioCard({
       </h3>
 
       {children ? (
-        <div className="relative z-10 h-full">
-          {children}
-        </div>
+        <div className="relative z-10 h-full">{children}</div>
       ) : image ? (
-        <div className="absolute inset-0 z-10 flex items-end justify-center overflow-hidden">
+        <div className="absolute inset-0 z-10 flex items-end justify-center">
           <Image
             src={image}
             alt={title}
