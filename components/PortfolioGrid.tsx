@@ -36,7 +36,7 @@ export function PortfolioGrid() {
       >
         <PortfolioCard
           title="PRESENTATION"
-          image="/images/presentation-new.png"
+          image="/images/presentation-new2.png"
           imageClassName="!h-[135px] translate-y-4"
         />
       </Link>
