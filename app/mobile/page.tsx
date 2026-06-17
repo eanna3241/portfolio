@@ -201,8 +201,8 @@ export default function MobilePage() {
                 <Image
                   src={item.image}
                   alt=""
-                  width={460}
-                  height={900}
+                  width={400}
+                  height={840}
                   className="absolute bottom-[-210px] left-1/2 h-[500px] w-auto -translate-x-1/2 object-contain transition-transform duration-500 group-hover:-translate-y-3 md:bottom-[-130px] md:left-auto md:right-10 md:h-[520px] md:translate-x-0"
                 />
               </Link>
