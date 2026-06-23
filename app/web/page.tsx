@@ -7,8 +7,8 @@ const screens = ["/images/travel-main registered.png"];
 export default function TravelCasePage() {
   return (
     <main className="min-h-screen bg-background">
-      <div className="px-7 py-10 md:min-w-[1200px] md:px-10 md:py-8 2xl:px-14 2xl:py-10">
-        <div className="mx-auto flex max-w-[1400px] flex-col gap-6 md:gap-5 2xl:gap-7">
+      <div className="px-7 py-10 md:min-w-[1200px] md:px-10 md:py-8">
+        <div className="mx-auto flex max-w-[1400px] flex-col gap-6 md:gap-5">
           <CaseHeader active="web" />
 
           <Link
@@ -109,9 +109,7 @@ export default function TravelCasePage() {
                   </p>
 
                   <ul className="list-disc space-y-2 pl-5 text-[16px] leading-[130%] text-foreground md:text-[15px] md:text-muted 2xl:text-[17px]">
-                    <li>
-                      пользователи тратят много времени на поиск информации;
-                    </li>
+                    <li>пользователи тратят много времени на поиск информации;</li>
                     <li>маршрут часто собирается из нескольких сервисов;</li>
                     <li>сложно оценить реалистичность плана поездки;</li>
                     <li>важны персонализированные рекомендации.</li>
