@@ -8,7 +8,7 @@ export default function TravelCasePage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="px-7 py-10 md:min-w-[1200px] md:px-10 md:py-8">
-        <div className="mx-auto flex max-w-[1400px] flex-col gap-6 md:gap-5">
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-6 md:gap-5">
           <header className="flex items-center justify-between">
             <Link
               href="/"

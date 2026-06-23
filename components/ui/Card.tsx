@@ -8,7 +8,14 @@ type CardProps = {
 export function Card({ children, className = "" }: CardProps) {
   return (
     <div
-      className={`rounded-[var(--radius-card)] bg-card ${className}`.trim()}
+      className={`
+        bg-card
+        rounded-[50px]
+        md:rounded-[60px]
+        2xl:rounded-[70px]
+        3xl:rounded-[80px]
+        ${className}
+      `}
     >
       {children}
     </div>
