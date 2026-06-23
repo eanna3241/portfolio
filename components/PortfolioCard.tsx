@@ -22,7 +22,11 @@ export function PortfolioCard({
     <Card
       className={`
         relative overflow-hidden rounded-[50px] bg-white md:rounded-[60px]
-        ${wide ? "h-[180px] md:col-span-2 md:h-[220px]" : "h-[180px]"}
+        ${
+          wide
+            ? "h-[180px] md:col-span-2 md:h-[220px] 2xl:h-[260px]"
+            : "h-[180px] 2xl:h-[220px]"
+        }
       `}
     >
       <h3
@@ -30,7 +34,7 @@ export function PortfolioCard({
           absolute left-1/2 top-0 z-0 -translate-x-1/2
           text-[48px] font-semibold uppercase leading-none tracking-[-0.06em]
           text-[#E8E6E4] pointer-events-none select-none
-          md:text-[48px]
+          md:text-[48px] 2xl:text-[64px]
           ${titleClassName}
         `}
       >
@@ -44,9 +48,9 @@ export function PortfolioCard({
           <Image
             src={image}
             alt={title}
-            width={600}
-            height={400}
-            className={`h-[150px] w-auto object-contain ${imageClassName}`}
+            width={700}
+            height={500}
+            className={`h-[150px] w-auto object-contain 2xl:h-[190px] ${imageClassName}`}
           />
         </div>
       ) : null}
