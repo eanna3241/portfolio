@@ -3,14 +3,14 @@ import { Card } from "./ui/Card";
 import { Tag } from "./ui/Tag";
 
 const skills = [
-  "Research",
-  "UX/UI",
-  "Design System",
+  "UX Research",
+  "Product Design",
+  "UI Design",
+  "Design Systems",
+  "Usability Testing",
   "AI",
-  "Presentations",
-  "Google Workspace",
   "Branding",
-  "Adobe Creative Cloud",
+  "Presentations",
 ];
 
 export function ProfileCard() {
@@ -28,22 +28,25 @@ export function ProfileCard() {
       </div>
 
       <div className="px-5 pt-6 pb-8 md:px-7 md:pt-7 md:pb-10">
-        <h1 className="mb-4 text-[22px] font-semibold leading-[110%] text-gradient md:text-[22px] md:leading-[120%]">
+        <h1 className="mb-4 text-[22px] font-semibold leading-[110%] text-gradient">
           Привет, я — Аня Егорова!
         </h1>
 
-        <p className="mb-5 text-[18px] font-medium leading-[120%] text-foreground md:mb-4 md:text-[18px]">
-          Product &amp; Communication Designer +2 года опыта.
+        <p className="mb-5 text-[18px] font-medium leading-[125%] text-foreground">
+          Product & Communication Designer.
           <br />
-          Исследую, проектирую и запускаю цифровые продукты
+          Исследую поведение пользователей,
           <br />
-          для B2C и B2B.
+          проектирую цифровые продукты и создаю
+          <br />
+          понятный пользовательский опыт.
         </p>
 
-        <p className="mb-6 text-[16px] leading-[125%] text-muted md:text-[16px] md:leading-[120%]">
-          Бэкграунд в крупных брендинговых и коммуникационных проектах Ex-TWIGA
-          CG / OGGI Event, проекты для Авито, Альфа-Банк, HeadHunter, VK,
-          РЖД-Медицина.
+        <p className="mb-6 text-[16px] leading-[135%] text-muted">
+          Более 2 лет в продуктовым дизайне и 3+ года
+          в коммуникационном дизайне. Работала над
+          проектами для VK, hh.ru, Авито, Альфа-Банк,
+          РЖД-Медицина и других крупных брендов.
         </p>
 
         <div className="flex flex-wrap gap-2 md:gap-1.5">
