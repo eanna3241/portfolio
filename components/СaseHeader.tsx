@@ -17,10 +17,10 @@ export function CaseHeader({ active }: CaseHeaderProps) {
 
   return (
     <>
-      <header className="flex items-center justify-between">
+      <header className="grid grid-cols-[1fr_auto_1fr] items-center">
         <Link
           href="/"
-          className="flex items-center gap-4 transition-opacity hover:opacity-70"
+          className="flex items-center gap-4 justify-self-start transition-opacity hover:opacity-70"
         >
           <div className="relative h-20 w-20 overflow-hidden md:h-16 md:w-16">
             <Image
@@ -54,7 +54,9 @@ export function CaseHeader({ active }: CaseHeaderProps) {
           ))}
         </nav>
 
-        <SocialLinks />
+        <div className="justify-self-end">
+          <SocialLinks />
+        </div>
       </header>
 
       <div className="-mx-7 overflow-x-auto px-7 md:hidden [&::-webkit-scrollbar]:hidden">
