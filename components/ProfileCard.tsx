@@ -35,11 +35,7 @@ export function ProfileCard() {
         <p className="mb-5 text-[18px] font-medium leading-[125%] text-foreground">
           Product & Communication Designer.
           <br />
-          Исследую поведение пользователей,
-          <br />
-          проектирую цифровые продукты и создаю
-          <br />
-          понятный пользовательский опыт.
+          Исследую поведение пользователей, проектирую цифровые продукты и создаю понятный пользовательский опыт.
         </p>
 
         <p className="mb-6 text-[16px] leading-[135%] text-muted">
