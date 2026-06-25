@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SocialLinks } from "@/components/SocialLinks";
-import { AnimatedAvatar } from "@/components/AnimatedAvatar";
 
 const graphicCases = [
   {
     title: "Avito Open Event",
+    href: "/graphic/avito",
     image: "/images/graphic-avito.png",
     position: "md:left-[8%] md:top-[2%]",
     labelPosition: "md:right-[-30%] md:bottom-[8%]",
@@ -13,6 +13,7 @@ const graphicCases = [
   },
   {
     title: "Biocad",
+    href: "/graphic/biocad",
     image: "/images/graphic-biocad.png",
     position: "md:left-[46%] md:top-[16%]",
     labelPosition: "md:left-[-20%] md:bottom-[10%]",
@@ -20,6 +21,7 @@ const graphicCases = [
   },
   {
     title: "RZD-Medicine",
+    href: "/graphic/rzd",
     image: "/images/graphic-rzd.png",
     position: "md:right-[2%] md:top-[8%]",
     labelPosition: "md:left-[-20%] md:bottom-[20%]",
@@ -27,6 +29,7 @@ const graphicCases = [
   },
   {
     title: "Samolet Partners Day",
+    href: "/graphic/samolet",
     image: "/images/graphic-samolet.png",
     position: "md:left-[0%] md:top-[40%]",
     labelPosition: "md:right-[-28%] md:bottom-[20%]",
@@ -34,6 +37,7 @@ const graphicCases = [
   },
   {
     title: "Alfa Bank",
+    href: "/graphic/alfa",
     image: "/images/graphic-alfa.png",
     position: "md:left-[32%] md:top-[50%]",
     labelPosition: "md:right-[-22%] md:top-[28%]",
@@ -41,6 +45,7 @@ const graphicCases = [
   },
   {
     title: "VK",
+    href: "/graphic/vk",
     image: "/images/graphic-vk.png",
     position: "md:right-[10%] md:top-[48%]",
     labelPosition: "md:left-[-9%] md:bottom-[10%]",
@@ -58,7 +63,16 @@ export default function GraphicPage() {
               href="/"
               className="flex items-center gap-4 transition-opacity hover:opacity-70"
             >
-              <AnimatedAvatar />
+              <div className="relative h-20 w-20 overflow-hidden md:h-16 md:w-16">
+                <Image
+                  src="/images/profile-avatar.png"
+                  alt="Аня Егорова"
+                  fill
+                  className="object-contain"
+                  sizes="80px"
+                  priority
+                />
+              </div>
 
               <p className="hidden text-[18px] leading-[100%] tracking-tight text-foreground md:block">
                 Аня Егорова
@@ -148,8 +162,8 @@ export default function GraphicPage() {
             {graphicCases.map((item, index) => (
               <Link
                 key={item.title}
-                href="#"
-                className={`group relative block animate-card-reveal md:absolute ${item.position}`}
+                href={item.href}
+                className={`project-card group relative block animate-card-reveal md:absolute ${item.position}`}
                 style={{ animationDelay: `${index * 120}ms` }}
               >
                 <div

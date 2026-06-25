@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { PawCursor } from "@/components/PawCursor";
 
 const sfPro = localFont({
   src: [
@@ -30,12 +31,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="ru">
-      <body className={sfPro.variable}>{children}</body>
+      <body className={sfPro.variable}>
+        <PawCursor />
+        {children}
+      </body>
     </html>
   );
 }

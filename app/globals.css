@@ -29,8 +29,8 @@
   --color-tag-bg: var(--tag-bg);
   --color-tag-text: var(--tag-text);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sf-pro);
+  --font-mono: var(--font-sf-pro);
 
   --radius-card: var(--radius-card);
   --radius-inner: var(--radius-inner);
@@ -41,11 +41,34 @@ html {
 }
 
 body {
+
   min-width: 320px;
-  background: var(--background);
+
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+
+  font-family: var(--font-sf-pro), system-ui, sans-serif;
+
   letter-spacing: -0.01em;
+
+  background: #f7f5f2;
+
+  position: relative;
+
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(120,120,120,.18) 1.1px,
+      transparent 1.1px
+    );
+  background-size: 20px 20px;
 }
 
 .text-gradient {
@@ -55,7 +78,7 @@ body {
   color: transparent;
 }
 
-/* ---------- Animations ---------- */
+/* ---------- Card animation ---------- */
 
 @keyframes cardReveal {
   from {
@@ -80,4 +103,17 @@ body {
 .animate-card-reveal {
   opacity: 0;
   animation: cardReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ---------- Custom cursor ---------- */
+
+@media (min-width: 768px) {
+  html,
+  body,
+  a,
+  button,
+  .project-card,
+  [role="button"] {
+    cursor: none;
+  }
 }
