@@ -55,7 +55,7 @@ const graphicCases = [
 
 export default function GraphicPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-transparent">
       <div className="px-7 py-10 md:px-10 md:py-8">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-6 md:gap-5">
           <header className="flex items-center justify-between">
@@ -179,7 +179,7 @@ export default function GraphicPage() {
                 </div>
 
                 <div
-                  className={`mt-3 w-fit rounded-full bg-card px-7 py-3 text-[18px] font-normal leading-none text-foreground md:absolute md:mt-0 ${item.labelPosition}`}
+                  className={`mt-3 w-fit rounded-full bg-card px-7 py-3 text-[18px] font-medium leading-none text-foreground md:absolute md:mt-0 ${item.labelPosition}`}
                 >
                   {item.title}
                 </div>
