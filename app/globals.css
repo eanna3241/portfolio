@@ -41,34 +41,11 @@ html {
 }
 
 body {
-
   min-width: 320px;
-
+  background: var(--background);
   color: var(--foreground);
-
   font-family: var(--font-sf-pro), system-ui, sans-serif;
-
   letter-spacing: -0.01em;
-
-  background: #f7f5f2;
-
-  position: relative;
-
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  background-image:
-    radial-gradient(
-      circle,
-      rgba(120,120,120,.18) 1.1px,
-      transparent 1.1px
-    );
-  background-size: 20px 20px;
 }
 
 .text-gradient {
